@@ -20,7 +20,11 @@
 	flex-flow: column;
 	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
+  margin: 0 auto;
+}
+
+.App-forecast__container h3 {
+  margin: 20px 0;
 }
 
 .App-forecast__week {
@@ -45,8 +49,31 @@
 	margin: 10px;
 	padding: 20px;
 	transition: transform 0.2s linear;
-	min-height: 200px;
-	width: 40%;
+  min-height: 200px;
+	width: 30%;
+}
+
+.App-forecast__summary {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 5px 5px 20px 5px #ddd;
+  cursor: pointer;
+  display: flex;
+  font-size: 1.25em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 10px;
+  padding: 20px;
+  min-height: 200px;
+  width: 20%;
+}
+
+.App-forecast__summary-temperatures {
+  display: flex;
+  flex-direction: column;
 }
 
 .App-forecast__card:hover {

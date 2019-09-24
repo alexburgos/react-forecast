@@ -10,19 +10,22 @@ const DailyWeatherSummary: React.FC<Props> = props => {
 
 	return (
 		<div className="App-forecast__summary">
-			<div className="App-forecast__card-temperatures">
-				<p>Temperatures</p>
-				<span className="App-forecast__card-temperatures--min">
+			<span className="App-forecast__summary-temperatures">
+				<span>Temperatures</span>
+				<span className="App-forecast__summary-temperatures--min">
 					<span>High: {Math.round(forecast.temperatureMin)}</span>
 					<sup>°</sup>
 				</span>
-				<span className="App-forecast__card-temperatures--max">
+				<span className="App-forecast__summary-temperatures--max">
 					<span>Low: {Math.round(forecast.temperatureMax)}</span>
 					<sup>°</sup>
 				</span>
-			</div>
-			<span className="App-forecast__card-precipitation">
+			</span>
+			<span className="App-forecast__summary-precipitation">
 				Precipitation: {Math.round(forecast.precipProbability * 100)}%{' '}
+			</span>
+			<span className="App-forecast__summary-wind">
+				Wind Speed: {Math.round(forecast.windSpeed)}mph{' '}
 			</span>
 		</div>
 	);
