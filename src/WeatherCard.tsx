@@ -2,11 +2,11 @@ import React from 'react';
 import { Currently } from './interfaces/index';
 
 interface Props {
-  forecast: Currently;
+	forecast: Currently;
 }
 
-const WeatherCard: React.FC<Props> = (props) => {
-  let { forecast } = props;
+const WeatherCard: React.FC<Props> = props => {
+	let { forecast } = props;
 
 	return (
 		<div className="App-forecast__card">

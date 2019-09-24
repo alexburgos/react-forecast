@@ -1,62 +1,60 @@
 .App {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  text-align: center;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	text-align: center;
 }
 
-
 .App-header h1 {
-  font-size: 4em;
+	font-size: 4em;
 }
 
 .App-intro p {
-  font-size: 1em;
+	font-size: 1em;
 }
 
 .App-forecast__container {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
 }
 
 .App-forecast__week {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 auto;
 }
 
 .App-forecast__card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 5px 5px 20px 5px #ddd;
-  cursor: pointer;
-  display: flex;
-  font-size: 1.25em;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  margin: 10px;
-  padding: 20px;
-  transition: transform 0.2s linear;
-  min-height: 200px;
-  width: 40%;
+	background: #fff;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 5px 5px 20px 5px #ddd;
+	cursor: pointer;
+	display: flex;
+	font-size: 1.25em;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 10px;
+	padding: 20px;
+	transition: transform 0.2s linear;
+	min-height: 200px;
+	width: 40%;
 }
 
 .App-forecast__card:hover {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
-
 .App-forecast__card span {
-  display: block;
+	display: block;
 }
 
 /* @media (max-width: 800px) {

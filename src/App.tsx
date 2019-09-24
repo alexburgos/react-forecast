@@ -7,12 +7,12 @@ import './App.css';
 import loadingSun from './assets/sunny.svg';
 
 const App: React.FC = () => {
-  let [ forecast ] = useGetForecast();
-  let { data, isLoading, isError } = forecast;
+	let [forecast] = useGetForecast();
+	let { data, isLoading, isError } = forecast;
 
-  console.log(data);
+	console.log(data);
 
-  return (
+	return (
 		<div className="App">
 			<header className="App-header">
 				<h1>React Cast</h1>
@@ -38,13 +38,15 @@ const App: React.FC = () => {
 						<h3>This week's weather</h3>
 						<div className="App-forecast__week">
 							{data.daily.data.map(cast => console.log(cast))}
-							{data.daily.data.map(cast => <DailyWeatherSummary forecast={cast} />)}
+							{data.daily.data.map(cast => (
+								<DailyWeatherSummary forecast={cast} />
+							))}
 						</div>
 					</div>
 				)}
 			</div>
 		</div>
 	);
-}
+};
 
 export default App;

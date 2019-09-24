@@ -2,7 +2,7 @@ import React from 'react';
 import { Datum3 } from './interfaces/index';
 
 interface Props {
-  forecast: Datum3;
+	forecast: Datum3;
 }
 
 const DailyWeatherSummary: React.FC<Props> = props => {
