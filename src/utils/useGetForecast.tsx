@@ -40,25 +40,26 @@ const useForecastAPI = () => {
 				maximumAge: 0
 			};
 
+			const fetchForecastData = async (locationString: string) => {
+				setIsError(false);
+				try {
+					let response = await fetch(locationString);
+					let data = await response.json();
+					setIsLoading(false);
+					return data;
+				} catch (error) {
+					setIsLoading(false);
+					setIsError(true);
+				}
+			};
+
 			navigator.geolocation.getCurrentPosition(
 				pos => {
 					let { coords } = pos;
 					let locationString: string = `${PROXY}${API_URL}${coords.latitude},${coords.longitude}`;
 
-					const fetchForecastData = async () => {
-						setIsError(false);
-						try {
-							let response = await fetch(locationString);
-							let data = await response.json();
-							setIsLoading(false);
-							return data;
-						} catch (error) {
-							setIsLoading(false);
-							setIsError(true);
-						}
-					};
 
-					fetchForecastData().then(data => setForecast(data));
+					fetchForecastData(locationString).then(data => setForecast(data));
 				},
 				err => {
 					console.warn(`ERROR(${err.code}): ${err.message}`);
