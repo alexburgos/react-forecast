@@ -36,12 +36,6 @@ const App: React.FC = () => {
 					<div className="App-forecast__container">
 						<h3>Today's weather:</h3>
 						<WeatherCard forecast={data.currently} />
-						<h3>This week's weather:</h3>
-						<div className="App-forecast__week">
-							{data.daily.data.map((cast, i) => (
-								<DailyWeatherSummary forecast={cast} key={i} />
-							))}
-						</div>
 					</div>
 				)}
 			</div>
