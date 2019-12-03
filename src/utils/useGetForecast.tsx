@@ -60,20 +60,6 @@ const useForecastAPI = () => {
 				return new Promise<any>((resolve, reject) => {
 					navigator.geolocation.getCurrentPosition(resolve, reject, options);
 				});
-
-				// navigator.geolocation.getCurrentPosition(
-				// 	pos => {
-				// 		let { coords } = pos;
-				// 		let locationString: string = `${PROXY}${API_URL}${coords.latitude},${coords.longitude}`;
-
-				// 		return locationString;
-				// 		// fetchForecastData(locationString).then(data => setForecast(data));
-				// 	},
-				// 	err => {
-				// 		console.warn(`ERROR(${err.code}): ${err.message}`);
-				// 	},
-				// 	options
-				// );
 			}
 
 			const fetchForecastData = async (locationString: string) => {
